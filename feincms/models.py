@@ -522,6 +522,7 @@ def create_base_model(inherit_from=models.Model):
                     on_delete=models.CASCADE),
                 'region': models.CharField(max_length=255),
                 'ordering': models.IntegerField(_('ordering'), default=0),
+                'disabled': models.BooleanField(_('disabled'), default=False),
             }
 
             # create content base type and save reference on CMS class
